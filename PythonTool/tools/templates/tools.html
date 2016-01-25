@@ -1,0 +1,137 @@
+{% extends "base.html"%}
+{% block content %}
+  <!-- sidebar start -->
+  <!-- sidebar end -->
+  <!-- content start -->
+ 
+  <div class="admin-content">
+    <div class="am-cf am-padding">
+      <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">上海嫣红</strong> / <small>酷我秀场捕鱼2卡币查询</small></div>
+    </div>
+
+    <div class="am-g">
+      <div class="am-u-sm-12"> 
+      </div>
+    </div>
+    
+<div class="am-g doc-am-g">
+		<div class="am-u-sm-6 am-u-md-4 am-u-lg-1"> &nbsp;&nbsp;&nbsp;&nbsp;</div> <!-- 这一行其实是用来布局的左右分布 -->
+		<div class="am-u-sm-6 am-u-md-8 am-u-lg-12">
+			<p></p>
+			
+		
+			<label for="doc-ta-1">&nbsp;&nbsp;请选择平台游戏</label>
+			<form method='post' action='/oneTime'>
+				<div class="am-g doc-am-g">
+					<div class=am-form-group>
+					<div class=am-u-sm-4>
+						<select data-placeholder="Type &apos;C&apos; to view" style="width:250px;" class="chosen-select-no-results" tabindex="10">
+								  <option value="5">酷我捕鱼2</option>
+								  <option>American Black Bear</option>
+								  <option>Asiatic Black Bear</option>
+								  <option>Brown Bear</option>
+								  <option>Giant Panda</option>
+								  <option>Sloth Bear</option>
+								  <option>Sun Bear</option>
+								  <option>Polar Bear</option>
+								  <option>Spectacled Bear</option>
+								</select>
+								</div>
+						<div class=am-u-sm-4>
+								
+		
+							<div class="am-input-group am-datepicker-date"
+								data-am-datepicker="{format: 'yyyy-mm-dd', viewMode: 'years'}">
+								<input type="text" class="am-form-field" name="oneStartTime"
+									placeholder="开始日期   yyyy-mm-dd"> <span
+									class="am-input-group-btn am-datepicker-add-on">
+									<button class="am-btn am-btn-default" type="button">
+										<span class="am-icon-calendar"></span>
+									</button>
+								</span>
+								
+							</div>
+						</div>
+						<div class=am-u-sm-8>
+							<input id=search type=submit class="am-btn am-btn-default"
+								value='查询'> <input id=reset type=reset
+								class="am-btn am-btn-default" value='重置'>
+						</div>
+					</div>
+				</div>
+			</form>
+
+			
+			<label for="doc-ta-1">&nbsp;&nbsp;&nbsp;&nbsp;请输入查询日期</label>
+			<form method='post' action='/twoTime'>
+				<div class="am-g doc-am-g">
+					<div class=am-form-group>
+					
+						<div class=am-u-sm-4>
+							<div class="am-input-group am-datepicker-date"
+								data-am-datepicker="{format: 'yyyy-mm-dd', viewMode: 'years'}">
+								<input type="text" class="am-form-field" id="my-start"
+									name="twoStartTime" placeholder="开始日期   yyyy-mm-dd" readonly>
+								<span class="am-input-group-btn am-datepicker-add-on">
+									<button class="am-btn am-btn-default" type="button">
+										<span class="am-icon-calendar"></span>
+									</button>
+								</span>
+							</div>
+							<div class="am-input-group am-datepicker-date"
+								data-am-datepicker="{format: 'yyyy-mm-dd', viewMode: 'years'}">
+								<input type="text" class="am-form-field" name="twoEndTime"
+									placeholder="结束日期   yyyy-mm-dd" readonly> <span
+									class="am-input-group-btn am-datepicker-add-on">
+									<button class="am-btn am-btn-default" type="button">
+										<span class="am-icon-calendar"></span>
+									</button>
+								</span>
+							</div>
+
+						</div>
+						<div class=am-u-sm-8>
+							<input type=submit class="am-btn am-btn-default" value='查询'>
+							<input type=reset class="am-btn am-btn-default" value='重置'>
+						</div>
+					</div>
+				</div>
+			</form>
+			<hr>
+			<hr>
+			<form class="am-form" method='post' action='/textSql'>
+				<div class="am-g doc-am-g">
+					<div class=am-form-group>
+						<div class=am-u-sm-5>
+							<div class="am-form-group">
+								<label for="doc-ta-1">请输入你想查询的SQL</label>
+								<textarea class="" rows="8" id="doc-ta-1" name="textSql"></textarea>
+							</div>
+							<p>
+								<input type=submit class="am-btn am-btn-default" value='查询'>
+								<input type=reset class="am-btn am-btn-default" value='重置'>
+							</p>
+						</div>
+					</div>
+				</div>
+			</form>
+			<!--在这里编写你的代码-->
+			
+			
+		<div></div>
+
+</div>	
+		<!--[if (gte IE 9)|!(IE)]><!-->
+		<script src="{{ url_for('static',filename='js/jquery.min.js')}}"></script>
+		<!--<![endif]-->
+		<!--[if lte IE 8 ]>
+<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="{{ url_for('static',filename='js/amazeui.ie8polyfill.min.js')}}"></script>
+<![endif]-->
+		<script src="{{ url_for('static',filename='js/amazeui.min.js')}}"></script>
+   
+  </div>
+  <!-- content end -->
+
+{% endblock %}
